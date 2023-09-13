@@ -54,13 +54,16 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   Text(
                     'You are connected to WIFI',
-                    style: TextStyle(color: elembg, fontSize: 18),
+                    style: TextStyle(
+                      color: elembg,
+                      fontSize: MediaQuery.of(context).size.width * 0.04,
+                    ),
                   ),
-                  const Text(
+                  Text(
                     '"WIFI name"',
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 20,
+                      fontSize: MediaQuery.of(context).size.width * 0.05,
                       fontWeight: FontWeight.bold,
                     ),
                   ),

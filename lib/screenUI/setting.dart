@@ -67,11 +67,11 @@ class _SettingState extends State<Setting> {
               width: screenWidth,
               child: Column(
                 children: [
-                  const Text(
+                  Text(
                     'SETTING',
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 25,
+                      fontSize: MediaQuery.of(context).size.width * 0.07,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -327,10 +327,11 @@ class _ConactUsState extends State<ConactUs> {
                             size: 25,
                           ),
                         ),
-                        const Text(
+                        Text(
                           'Conact Us',
                           style: TextStyle(
-                              fontSize: 20,
+                              fontSize:
+                                  MediaQuery.of(context).size.width * 0.05,
                               fontWeight: FontWeight.bold,
                               color: Colors.white),
                         ),
@@ -343,7 +344,7 @@ class _ConactUsState extends State<ConactUs> {
                   Text(
                     'For ISPS',
                     style: TextStyle(
-                        fontSize: 20,
+                        fontSize: MediaQuery.of(context).size.width * 0.05,
                         fontWeight: FontWeight.bold,
                         color: main2),
                   ),
@@ -361,7 +362,7 @@ class _ConactUsState extends State<ConactUs> {
                   Text(
                     'For Users',
                     style: TextStyle(
-                        fontSize: 20,
+                        fontSize: MediaQuery.of(context).size.width * 0.05,
                         fontWeight: FontWeight.bold,
                         color: main2),
                   ),
@@ -386,7 +387,7 @@ class _ConactUsState extends State<ConactUs> {
                       Text(
                         'info@lale.app',
                         style: TextStyle(
-                            fontSize: 20,
+                            fontSize: MediaQuery.of(context).size.width * 0.05,
                             fontWeight: FontWeight.bold,
                             color: main2),
                       ),
@@ -447,10 +448,11 @@ class _AboutUsState extends State<AboutUs> {
                             size: 25,
                           ),
                         ),
-                        const Text(
+                        Text(
                           'About Us',
                           style: TextStyle(
-                              fontSize: 20,
+                              fontSize:
+                                  MediaQuery.of(context).size.width * 0.05,
                               fontWeight: FontWeight.bold,
                               color: Colors.white),
                         ),
@@ -482,7 +484,7 @@ class _AboutUsState extends State<AboutUs> {
                   Text(
                     'App Features',
                     style: TextStyle(
-                        fontSize: 20,
+                        fontSize: MediaQuery.of(context).size.width * 0.05,
                         fontWeight: FontWeight.bold,
                         color: main2),
                   ),

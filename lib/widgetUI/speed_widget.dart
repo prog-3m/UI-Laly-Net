@@ -11,19 +11,23 @@ class SpeedWidget extends StatelessWidget {
       width: MediaQuery.sizeOf(context).width,
       height: MediaQuery.sizeOf(context).height,
       //color: Colors.amberAccent,
-      child: const Column(
+      child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Text(
             'Internet speed test',
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            style: TextStyle(
+                fontSize: MediaQuery.of(context).size.width * 0.05,
+                fontWeight: FontWeight.bold),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Text('DOWNLOAD',
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.normal)),
-          SizedBox(height: 20),
-          LinearProgressIndicatorPage(),
+              style: TextStyle(
+                  fontSize: MediaQuery.of(context).size.width * 0.04,
+                  fontWeight: FontWeight.normal)),
+          const SizedBox(height: 20),
+          const LinearProgressIndicatorPage(),
         ],
       ),
     );

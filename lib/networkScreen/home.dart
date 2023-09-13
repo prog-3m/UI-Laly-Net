@@ -54,12 +54,14 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: [
                     Text(
                       'You are connection to',
-                      style: TextStyle(color: elembg, fontSize: 18),
+                      style: TextStyle(
+                          color: elembg,
+                          fontSize: MediaQuery.of(context).size.width * 0.04),
                     ),
-                    const Text('mobile data',
+                    Text('mobile data',
                         style: TextStyle(
                             color: Colors.orange,
-                            fontSize: 20,
+                            fontSize: MediaQuery.of(context).size.width * 0.05,
                             fontWeight: FontWeight.bold)),
                     ShaderMask(
                       blendMode: BlendMode.srcIn,

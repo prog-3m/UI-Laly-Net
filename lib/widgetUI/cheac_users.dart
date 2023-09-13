@@ -41,9 +41,11 @@ class _CheakUserState extends State<CheakUser> {
                     size: screenWidth * 0.07,
                   ),
                 ),
-                const Text(
+                Text(
                   'http://earthlink.iq',
-                  style: TextStyle(color: Colors.black, fontSize: 20),
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: MediaQuery.of(context).size.width * 0.05),
                 ),
               ],
             ),
@@ -97,10 +99,10 @@ class _CheakUserState extends State<CheakUser> {
                 ),
               ),
               onPressed: () {},
-              child: const Text(
+              child: Text(
                 'Login',
                 style: TextStyle(
-                  fontSize: 20,
+                  fontSize: MediaQuery.of(context).size.width * 0.05,
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
@@ -118,10 +120,10 @@ class _CheakUserState extends State<CheakUser> {
                 ),
               ),
               onPressed: widget.openScre,
-              child: const Text(
+              child: Text(
                 'Check another company domain',
                 style: TextStyle(
-                  //fontSize: 15,
+                  fontSize: MediaQuery.of(context).size.width * 0.035,
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
