@@ -23,27 +23,38 @@ class CheackCompanyDomain extends StatelessWidget {
               },
               icon: Icon(
                 CupertinoIcons.chevron_left_circle_fill,
-                color: mainbg,
+                // color: mainbg,
                 size: screenWidth * 0.07,
               ),
             ),
-            const Text('Your ISP is Not Register With Us'),
+            Text(
+              'Your ISP is Not Register With Us',
+              style: TextStyle(color: Theme.of(context).primaryColor),
+            ),
           ],
         ),
         SizedBox(
-          height: 50,
-          width: screenWidth * 0.8,
-          child: TextField(
-            cursorColor: Colors.black,
-            decoration: InputDecoration(
-              border:
-                  OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
-              labelText: 'User Control Panel Domain',
-              labelStyle: const TextStyle(color: Colors.black45),
-              focusedBorder: const OutlineInputBorder(),
-            ),
-          ),
-        ),
+            height: 50,
+            width: screenWidth * 0.8,
+            child: TextField(
+              cursorColor: Theme.of(context).primaryColor,
+              decoration: InputDecoration(
+                border:
+                    OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+                labelText: 'User Control Panel Domain',
+                labelStyle: TextStyle(color: Theme.of(context).focusColor),
+                enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Theme.of(context).primaryColor,
+                  ),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Theme.of(context).primaryColor,
+                  ),
+                ),
+              ),
+            )),
         const SizedBox(
           height: 20,
         ),

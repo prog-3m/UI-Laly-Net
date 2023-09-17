@@ -50,7 +50,7 @@ class _InfoServerState extends State<InfoServer> {
                 ),
               ),
               Container(
-                color: Colors.white,
+                color: Theme.of(context).canvasColor,
                 height: screenHeight / 1.7,
                 width: screenWidth,
               ),
@@ -61,7 +61,7 @@ class _InfoServerState extends State<InfoServer> {
             left: screenWidth * 0.05,
             right: screenWidth * 0.05,
             child: Container(
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                 boxShadow: [
                   BoxShadow(
                       color: Colors.grey,
@@ -71,7 +71,7 @@ class _InfoServerState extends State<InfoServer> {
                 ],
                 // border: Border.all(color: main2),
                 borderRadius: BorderRadius.all(Radius.circular(10)),
-                color: Colors.white,
+                color: Theme.of(context).canvasColor,
               ),
               height: screenHeight / 1.7,
               width: screenWidth,
@@ -144,7 +144,7 @@ class _InfoServerState extends State<InfoServer> {
             style: TextStyle(
               fontSize: scfont,
               //screenWidth * 0.04,
-              color: Colors.grey[600],
+              color: Theme.of(context).focusColor,
               //fontWeight: FontWeight.bold,
             ),
           ),
@@ -152,7 +152,7 @@ class _InfoServerState extends State<InfoServer> {
             txt2,
             style: TextStyle(
               fontSize: scfont,
-              color: Colors.black,
+              color: Theme.of(context).primaryColor,
               fontWeight: FontWeight.bold,
             ),
           ),

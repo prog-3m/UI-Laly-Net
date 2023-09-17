@@ -76,15 +76,16 @@ class _LinearProgressIndicatorPageState
                     ),
                     child: Container(
                       decoration: BoxDecoration(
-                          border: Border.all(color: main2),
+                          border: Border.all(color: main2, width: 1),
                           borderRadius: const BorderRadius.all(
-                            Radius.circular(15),
+                            Radius.circular(25),
                           ),
                           color: elembg),
                       height: 18,
-                      width: 150,
+                      width: 180,
                       child: _isLoading
                           ? LinearProgressIndicator(
+                              backgroundColor: navbg,
                               color: Colors.orange,
                               value: _animation.value,
                             )
@@ -113,6 +114,10 @@ class _LinearProgressIndicatorPageState
 
           const SizedBox(height: 20),
           ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              side: BorderSide(color: main2),
+              backgroundColor: Theme.of(context).highlightColor,
+            ),
             onPressed: _startLoading,
             child: const Text('Start Speed Test'),
           ),

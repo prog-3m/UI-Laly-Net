@@ -32,7 +32,7 @@ class _MainPageState extends State<MainPage> {
       bottomNavigationBar: NavigationBarTheme(
         data: Theme.of(context).navigationBarTheme,
         child: NavigationBar(
-            backgroundColor: navbg,
+            //backgroundColor: navbg,
             height: 70,
             selectedIndex: index,
             onDestinationSelected: (index) => setState(() {

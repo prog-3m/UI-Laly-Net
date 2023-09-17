@@ -72,6 +72,7 @@ class _NavBottonState extends State<NavBotton> {
         Container(
           padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 2),
           height: MediaQuery.of(context).size.height / 1.5,
+          //color: Theme.of(context).canvasColor,
           width: screenWidth * 0.9,
           child: PageView.builder(
             controller: pageController,

@@ -83,20 +83,32 @@ class _SettingState extends State<Setting> {
                       borderRadius: BorderRadius.circular(100),
                       border: Border.all(color: Colors.orange),
                     ),
-                    child: Switch(
-                      value: val,
-                      onChanged: (bool value) {
-                        setState(() {
-                          val = value;
-                        });
-                      },
+                    child: Transform.scale(
+                      scale: 1.5,
+                      child: Switch(
+                        activeColor: Colors.white, // Set the active color
+                        activeTrackColor: main2,
+
+                        inactiveThumbColor:
+                            Colors.grey, // Set the inactive thumb color
+                        inactiveTrackColor: Colors.grey.shade300,
+                        activeThumbImage: AssetImage('assest/5007200.png'),
+                        inactiveThumbImage: AssetImage('assest/down.png'),
+                        splashRadius: 50,
+                        value: val,
+                        onChanged: (bool value) {
+                          setState(() {
+                            val = value;
+                          });
+                        },
+                      ),
                     ),
                   ),
                   const SizedBox(height: 20),
                   Text(
                     val ? 'Light Mood' : 'Dark Mood',
                     style: const TextStyle(
-                      color: Colors.orange,
+                      color: Colors.orangeAccent,
                       fontSize: 15,
                       fontWeight: FontWeight.bold,
                     ),
@@ -109,8 +121,8 @@ class _SettingState extends State<Setting> {
                 Container(
                   height: screenHeight / 1.6,
                   width: screenWidth,
-                  decoration: const BoxDecoration(
-                    color: Colors.white,
+                  decoration: BoxDecoration(
+                    color: Theme.of(context).canvasColor,
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(15),
                       topRight: Radius.circular(15),
@@ -188,7 +200,10 @@ class _SettingState extends State<Setting> {
               icon,
               color: Colors.orange,
             ),
-            title: Text(txt),
+            title: Text(
+              txt,
+              style: TextStyle(color: Theme.of(context).primaryColor),
+            ),
             titleAlignment: ListTileTitleAlignment.center,
             trailing: IconButton(
               onPressed: func,
@@ -224,11 +239,11 @@ class _LanguageSelectionDialogState extends State<LanguageSelectionDialog> {
       width: screenWidth * 0.9,
       height: screenHeight * 0.3,
       decoration: BoxDecoration(
-        color: elembg,
+        color: Theme.of(context).hoverColor,
         borderRadius: BorderRadius.circular(15),
       ),
       child: AlertDialog(
-        backgroundColor: elembg,
+        backgroundColor: Theme.of(context).hintColor,
         // alignment: Alignment(10, 120),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16.0),
@@ -245,7 +260,10 @@ class _LanguageSelectionDialogState extends State<LanguageSelectionDialog> {
           children: [
             RadioListTile(
               activeColor: Colors.orange,
-              title: const Text('Arabic'),
+              title: Text(
+                'Arabic',
+                style: TextStyle(color: Theme.of(context).primaryColor),
+              ),
               value: 'Arabic',
               groupValue: selectedLanguage,
               onChanged: (value) {
@@ -256,7 +274,8 @@ class _LanguageSelectionDialogState extends State<LanguageSelectionDialog> {
             ),
             RadioListTile(
               activeColor: Colors.orange,
-              title: const Text('English'),
+              title: Text('English',
+                  style: TextStyle(color: Theme.of(context).primaryColor)),
               value: 'English',
               groupValue: selectedLanguage,
               onChanged: (value) {
@@ -299,7 +318,7 @@ class _ConactUsState extends State<ConactUs> {
         width: screenWidth * 0.9,
         height: screenHeight * 0.6,
         decoration: BoxDecoration(
-          color: elembg,
+          color: Theme.of(context).hoverColor,
           borderRadius: BorderRadius.circular(10),
         ),
         // Define how long the animation should take.
@@ -420,7 +439,7 @@ class _AboutUsState extends State<AboutUs> {
         width: screenWidth * 0.9,
         height: screenHeight * 0.6,
         decoration: BoxDecoration(
-          color: elembg,
+          color: Theme.of(context).hoverColor,
           borderRadius: BorderRadius.circular(10),
         ),
         // Define how long the animation should take.

@@ -21,7 +21,7 @@ class PingWidget extends StatelessWidget {
             const Text('Write Number of request:'),
             Container(
               decoration: BoxDecoration(
-                border: Border.all(),
+                border: Border.all(color: Theme.of(context).primaryColor),
                 borderRadius: const BorderRadius.all(
                   Radius.circular(5),
                 ),
@@ -109,7 +109,7 @@ class PingWidget extends StatelessWidget {
               borderRadius: const BorderRadius.all(
                 Radius.circular(15),
               ),
-              color: elembg,
+              color: Theme.of(context).hintColor,
             ),
             child: Padding(
               padding: const EdgeInsets.only(left: 8.0, right: 8),
@@ -128,7 +128,11 @@ class PingWidget extends StatelessWidget {
                         ),
                         color: secbtn,
                       ),
-                      child: const Center(child: Text('ping')),
+                      child: Center(
+                          child: Text(
+                        'ping',
+                        style: TextStyle(color: main2),
+                      )),
                     ),
                   ),
                 ],
@@ -197,8 +201,8 @@ class _IconRowState extends State<IconRow> {
             },
             child: Column(
               children: [
-                buildResponsiveContainer(
-                    selectedIcon, 0, Icons.router, Colors.black),
+                buildResponsiveContainer(selectedIcon, 0, Icons.router,
+                    Theme.of(context).primaryColor),
                 // Container(
                 //   height: 40,
                 //   width: 40,
@@ -241,10 +245,10 @@ class _IconRowState extends State<IconRow> {
                             ? 50
                             : 60,
                     decoration: BoxDecoration(
-                      color: elembg,
+                      color: Theme.of(context).hintColor,
                       border: Border.all(
                         color: selectedIcon == 1
-                            ? Colors.black
+                            ? Theme.of(context).primaryColor
                             : Colors.transparent,
                       ),
                       borderRadius: const BorderRadius.all(
@@ -344,7 +348,7 @@ class _IconRowState extends State<IconRow> {
                 //     color: Colors.red,
                 //   ),
                 // ),
-                Text('youTube',
+                Text('youtube',
                     style: TextStyle(
                       letterSpacing: 0,
                       fontSize: MediaQuery.of(context).size.width * 0.03,
@@ -401,9 +405,11 @@ class _IconRowState extends State<IconRow> {
       height: _calculateContainerSize(context),
       width: _calculateContainerSize(context),
       decoration: BoxDecoration(
-        color: elembg,
+        color: Theme.of(context).hintColor,
         border: Border.all(
-          color: selectedIcon == selected ? Colors.black : Colors.transparent,
+          color: selectedIcon == selected
+              ? Theme.of(context).primaryColor
+              : Colors.transparent,
         ),
         borderRadius: const BorderRadius.all(
           Radius.circular(10),

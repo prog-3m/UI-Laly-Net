@@ -106,18 +106,21 @@ class InfoPage extends StatelessWidget {
                   height: 40,
                   width: MediaQuery.of(context).size.width * 0.3,
                   decoration: BoxDecoration(
-                    border: Border.all(color: Colors.black),
+                    border: Border.all(color: Theme.of(context).primaryColor),
                     borderRadius: const BorderRadius.all(Radius.circular(20)),
-                    color: Colors.white,
+                    color: Theme.of(context).canvasColor,
                   ),
                   child: TextButton.icon(
                     onPressed: () {},
-                    icon: const Icon(Icons.router_outlined),
+                    icon: Icon(
+                      Icons.router_outlined,
+                      color: main2,
+                    ),
                     label: Text(
                       'Router',
                       style: TextStyle(
                         fontSize: MediaQuery.of(context).size.width * 0.03,
-                        //  color: activePage == 2 ? Colors.white : main2,
+                        color: main2,
                       ),
                     ),
                   ),

@@ -78,7 +78,7 @@ class _HomePageState extends State<HomePage> {
               width: screenWidth,
               height: screenHeight * 0.8,
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: Theme.of(context).canvasColor,
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(screenWidth * 0.1),
                   topRight: Radius.circular(screenWidth * 0.1),

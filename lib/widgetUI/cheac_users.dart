@@ -37,14 +37,14 @@ class _CheakUserState extends State<CheakUser> {
                   },
                   icon: Icon(
                     CupertinoIcons.chevron_left_circle_fill,
-                    color: mainbg,
+                    // color: mainbg,
                     size: screenWidth * 0.07,
                   ),
                 ),
                 Text(
                   'http://earthlink.iq',
                   style: TextStyle(
-                      color: Colors.black,
+                      color: Theme.of(context).primaryColor,
                       fontSize: MediaQuery.of(context).size.width * 0.05),
                 ),
               ],
@@ -56,16 +56,28 @@ class _CheakUserState extends State<CheakUser> {
               height: 50,
               width: screenWidth * 0.8,
               child: TextField(
-                cursorColor: Colors.black,
+                cursorColor: Theme.of(context).primaryColor,
                 decoration: InputDecoration(
                   labelText: 'User Control Panel Domain',
-                  labelStyle: const TextStyle(color: Colors.black45),
+                  labelStyle: TextStyle(
+                    color: Theme.of(context).focusColor,
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Theme.of(context).primaryColor,
+                    ),
+                  ),
                   focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
+                    borderSide: BorderSide(
+                      color: Theme.of(context).primaryColor,
+                    ),
                   ),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
+                  // focusedBorder: OutlineInputBorder(
+                  //   borderRadius: BorderRadius.circular(10),
+                  // ),
+                  // border: OutlineInputBorder(
+                  //   borderRadius: BorderRadius.circular(10),
+                  // ),
                 ),
               ),
             ),
@@ -74,15 +86,27 @@ class _CheakUserState extends State<CheakUser> {
               height: 50,
               width: screenWidth * 0.8,
               child: TextField(
-                cursorColor: Colors.black,
+                cursorColor: Theme.of(context).primaryColor,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
                   labelText: 'User Control Panel Domain',
-                  labelStyle: const TextStyle(color: Colors.black45),
+                  labelStyle: TextStyle(
+                    color: Theme.of(context).focusColor,
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Theme.of(context).primaryColor,
+                    ),
+                  ),
                   focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
+                    borderSide: BorderSide(
+                      color: Theme.of(context).primaryColor,
+                    ),
+                    //labelStyle: const TextStyle(color: Colors.black45),
+                    // focusedBorder: OutlineInputBorder(
+                    //   borderRadius: BorderRadius.circular(10),
                   ),
                 ),
               ),
